@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_task_selector"
+    android:orientation="vertical"
+    android:padding="10dip">
+
+    <ImageView
+        android:id="@+id/task_item_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_task_3" />
+
+    <RelativeLayout
+        android:id="@+id/task_item_rlt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@+id/task_item_iv">
+
+        <TextView
+            android:id="@+id/task_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/task_item_go"
+            android:text="Special offers 1"
+            android:textColor="#3C3E46"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/task_item_online"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task_item_name"
+            android:layout_toLeftOf="@+id/task_item_go"
+            android:text="20,709 people online"
+            android:textColor="#6E6E6E"
+            android:visibility="gone"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/task_item_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_task_go" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/task_item_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/task_item_rlt"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@+id/task_item_iv"
+        android:lines="1"
+        android:text="@string/task_desc"
+        android:textColor="#B7B7B7"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

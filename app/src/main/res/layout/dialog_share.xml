@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="20dip">
+
+    <ImageView
+        android:id="@+id/share_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_del" />
+
+    <TextView
+        android:id="@+id/share_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:paddingLeft="20dip"
+        android:text="@string/app_name"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingTop="10dip">
+        <TextView
+            android:id="@+id/share_msg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3.5dp"
+            android:paddingLeft="30dip"
+            android:paddingTop="8dip"
+            android:text="--" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="20dip"
+        android:background="#D5D5D5" />
+
+    <GridView
+        android:id="@+id/share_platform_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0.0dip"
+        android:gravity="center"
+        android:horizontalSpacing="10.0dip"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:verticalSpacing="10.0dip"></GridView>
+
+</LinearLayout>

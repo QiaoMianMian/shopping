@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="#EC3132">
+
+        <ImageView
+            android:id="@+id/profileBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_top_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/profileSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bg_save"
+            android:paddingLeft="2dip"
+            android:paddingRight="2dip"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profileAvatarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="12dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Avatar"
+            android:textColor="#7C7979" />
+
+        <ImageView
+            android:id="@+id/profileAvatar"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_avatar" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/profileIdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="12dip">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="ID"
+            android:textColor="#7C7979"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/profileId"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:drawablePadding="10dip"
+            android:gravity="right"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:text="152.52.126.121"
+            android:textColor="#CECECE" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profileNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="12dip">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textColor="#7C7979" />
+
+        <EditText
+            android:id="@+id/profileName"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:background="@null"
+            android:drawablePadding="10dip"
+            android:drawableRight="@mipmap/arrow_right"
+            android:gravity="right"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:textColor="#CECECE" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profileNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="12dip">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:hint="Phone Number"
+            android:textColor="#7C7979" />
+
+        <EditText
+            android:id="@+id/profileNumber"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:background="@null"
+            android:drawablePadding="10dip"
+            android:drawableRight="@mipmap/arrow_right"
+            android:gravity="right"
+            android:numeric="integer"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:textColor="#CECECE" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/profileGenderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="12dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Gender"
+            android:textColor="#7C7979" />
+
+        <ImageView
+            android:id="@+id/profileGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_gender_male" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_text_color">#ffffffff</color>
+    <color name="base_txt_textColor">#ff575454</color>
+    <color name="base_edit_textColor">#ff232323</color>
+    <color name="base_bg_color">#ffb13640</color>
+    <color name="line_color">#C5C5C5</color>
+    <color name="dialog_bottom_devider">#ffcacaca</color>
+    <color name="thumbColor">#66aaaaaa</color>
+    <color name="headerBgColor">#075E55</color>
+</resources>

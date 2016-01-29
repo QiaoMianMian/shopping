@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="more_account_bg_pressed" type="drawable">#ffe5e5e5</item>
+    <item name="base_bg_drawable" type="drawable">#ffe64551</item>
+    <item name="dialog_item_pressed" type="drawable">#ffe3e0d7</item>
+    <item name="task_item_pressed" type="drawable">#FFFF80</item>
+    <item name="task_item_unpress" type="drawable">#FFFFFF</item>
+</resources>

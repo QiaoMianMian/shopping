@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="#EC3132"
+        android:minHeight="48dip">
+
+        <TextView
+            android:id="@+id/frg_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dip"
+            android:text="Task"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dip"
+        android:background="@drawable/bg_task"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share Task:"
+            android:textColor="#4D4D4D"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Share with 10 friends to get 500 credits"
+            android:textColor="#8D8D8D"
+            android:textSize="19sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="10dip">
+
+            <ImageView
+                android:id="@+id/mTaskShareFb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/mTaskShareWhatsapp"
+                android:src="@drawable/share_facebook" />
+
+            <ImageView
+                android:id="@+id/mTaskShareWhatsapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:src="@drawable/share_whatsapp" />
+
+            <ImageView
+                android:id="@+id/mTaskShareMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/mTaskShareWhatsapp"
+                android:src="@drawable/share_more" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dip"
+        android:background="@drawable/bg_task"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task OfferWall:"
+            android:textColor="#4D4D4D"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/mTaskOfferwall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:minWidth="280dip"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/DialogText.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="47dip" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/base_bg_color" />
+    </LinearLayout>
+
+    <com.android.shopping.widget.DialogContentFrameLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/message"
+                style="@style/DialogText.Message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="3.0dip" />
+        </ScrollView>
+    </com.android.shopping.widget.DialogContentFrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/dialog_bottom_devider" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/positiveButton"
+                style="@style/DialogText.ButtonText"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:singleLine="true" />
+
+            <View
+                android:id="@+id/expendBtnDevider"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/dialog_bottom_devider" />
+
+            <Button
+                android:id="@+id/expendButton"
+                style="@style/DialogText.ButtonText"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:singleLine="true" />
+
+            <View
+                android:id="@+id/negativeBtnDevider"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/dialog_bottom_devider" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                style="@style/DialogText.ButtonText"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

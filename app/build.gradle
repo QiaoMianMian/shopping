@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    dexOptions {
+        preDexLibraries = false
+    }
+
+    defaultConfig {
+        applicationId "com.android.shopping"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        manifestPlaceholders = [
+                UMENG_APPKEY_VALUE : "568e493a67e58e2f7e001b74",
+                TD_APP_VALUE       : "3EC49B9719D7C5DC04CE16A77373687E",
+                UMENG_CHANNEL_VALUE: "beta",
+        ]
+    }
+    signingConfigs {
+        myConfig {
+            storeFile file("key.keystore")
+            storePassword "key123456"
+            keyAlias "com.android.key"
+            keyPassword "key123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.myConfig
+        }
+    }
+
+    productFlavors {
+        landingpage {
+            manifestPlaceholders = [
+                    UMENG_APPKEY_VALUE : "568e493a67e58e2f7e001b74",
+                    TD_APP_VALUE       : "3EC49B9719D7C5DC04CE16A77373687E",
+                    UMENG_CHANNEL_VALUE: "landingpage",
+            ]
+        }
+
+        ziyou_portal {
+            manifestPlaceholders = [
+                    UMENG_APPKEY_VALUE : "568e493a67e58e2f7e001b74",
+                    TD_APP_VALUE       : "3EC49B9719D7C5DC04CE16A77373687E",
+                    UMENG_CHANNEL_VALUE: "ziyou_portal",
+            ]
+        }
+
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def channel = variant.getMergedFlavor().getManifestPlaceholders().get('UMENG_CHANNEL_VALUE');
+                def fileName = variant.getApplicationId() +
+                        "-" + variant.getVersionName() + "-" + channel + '.apk';
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+}
+
+dependencies {
+    compile files('src/main/libs/umeng-analytics-v5.2.11.jar')
+    compile files('src/main/libs/TalkingDataAnalytics_V2.0.4.1.jar')
+    compile files('src/main/libs/tapjoyconnectlibrary.jar')
+    compile project(':ViewPagerIndicator-lib')
+    compile('com.google.android.gms:play-services-ads:8.3.0') {
+        exclude module: 'support-v4'
+    }
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile('com.facebook.android:facebook-android-sdk:4.9.0') {
+        exclude module: 'support-v4'
+    }
+}

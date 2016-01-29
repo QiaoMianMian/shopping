@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <com.android.shopping.widget.photo.CropImageView
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_gravity="center"
+        android:background="#55000000" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/crop_image_banner_bg" >
+
+        <ImageButton
+            android:id="@+id/rotateRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20.0dip"
+            android:background="@drawable/crop_image_round_button_selector" />
+
+        <TextView
+            android:id="@+id/clip_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20.0dip"
+            android:layout_toRightOf="@id/rotateRight"
+            android:gravity="center"
+            android:text="@string/clip_tip"
+            android:textColor="@color/base_txt_textColor" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/common_large_button_selector"
+            android:text="Save" />
+    </RelativeLayout>
+
+</RelativeLayout>

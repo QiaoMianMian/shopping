@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="12.0dip"
+        android:paddingTop="12.0dip">
+
+        <LinearLayout
+            style="@style/ListBackgroundUpNoPressedStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="1.0dip"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_marginRight="5.0dip"
+                android:gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_login_user" />
+
+            <EditText
+                android:id="@+id/registerUser"
+                style="@style/LoginEditTextStyle"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:hint="@string/txt_account_hint"
+                android:paddingLeft="6.0dip"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ListBackgroundDownNoPressedStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="1.0dip"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_marginRight="5.0dip"
+                android:gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_login_pwd" />
+
+
+            <EditText
+                android:id="@+id/registerPwd"
+                style="@style/LoginEditTextStyle"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:hint="@string/txt_pwd_hint"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ListBackgroundDownNoPressedStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/registerRemeber"
+            style="@style/CheckBox"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:checked="true"
+            android:text="@string/txt_remember_pwd"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="14.0dip">
+
+        <Button
+            android:id="@+id/registerLogin"
+            style="@style/EnteryLoginButtonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:background="@drawable/entry_register_selector"
+            android:text="@string/guide_login"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+
+</LinearLayout>

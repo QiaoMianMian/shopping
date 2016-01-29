@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dip">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <ImageView
+            android:id="@+id/goods_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_coin" />
+
+        <TextView
+            android:id="@+id/goods_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="5 Credits"
+            android:textColor="#FF9D39"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/goods_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dip"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_goods_12" />
+
+    <ImageView
+        android:id="@+id/goods_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_hot"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_pic"
+        android:layout_marginTop="5dip">
+
+        <TextView
+            android:id="@+id/goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="2dip"
+            android:layout_toLeftOf="@+id/goods_claim"
+            android:singleLine="true"
+            android:text="-------"
+            android:textColor="#3C3E46"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:id="@+id/goods_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/goods_name"
+            android:layout_toLeftOf="@+id/goods_claim"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/goods_participation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/participation"
+                android:textColor="#929292"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/goods_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:singleLine="true"
+                android:text="--"
+                android:textColor="#ED3233"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/goods_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="(--)"
+                android:textColor="#929292"
+                android:textSize="9sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/goods_desc"
+            android:layout_toLeftOf="@+id/goods_claim"
+            android:orientation="horizontal"
+            android:paddingTop="1dip"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/goods_star_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_star_off" />
+
+            <ImageView
+                android:id="@+id/goods_star_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_star_off" />
+
+            <ImageView
+                android:id="@+id/goods_star_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_star_off" />
+
+            <ImageView
+                android:id="@+id/goods_star_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_star_off" />
+
+            <ImageView
+                android:id="@+id/goods_star_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_star_off" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/goods_claim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_claim"
+            android:paddingBottom="2dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:paddingTop="2dip"
+            android:text="@string/claim"
+            android:textColor="#FFFFFF"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

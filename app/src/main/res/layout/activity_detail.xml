@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dip"
+        android:background="#EC3132"
+        android:minHeight="42dip">
+
+        <ImageView
+            android:id="@+id/mDetailBack"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_top_back" />
+
+        <TextView
+            android:id="@+id/head_txt_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dip"
+            android:text="Reward Details"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@+id/mDetailIcon"
+                    android:layout_width="200dip"
+                    android:layout_height="150dip"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_goods_1" />
+
+                <RelativeLayout
+                    android:id="@+id/mDetailRlt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mDetailIcon">
+
+                    <TextView
+                        android:id="@+id/mDetailState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_txt"
+                        android:padding="5dip"
+                        android:text="Runing"
+                        android:textColor="#EE3132" />
+
+                    <TextView
+                        android:id="@+id/mDetailName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@+id/mDetailState"
+                        android:gravity="center_vertical"
+                        android:lines="2"
+                        android:padding="5dip"
+                        android:text="Micromax Canvas Laptab LT666 10.1-inch Touchscreen Laptop"
+                        android:textColor="#474747" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/mDetailNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mDetailRlt"
+                    android:layout_marginTop="10dip"
+                    android:padding="5dip"
+                    android:singleLine="true"
+                    android:text="2016012012"
+                    android:textColor="#ABABAB" />
+
+                <ProgressBar
+                    android:id="@+id/mDetailProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dip"
+                    android:layout_below="@+id/mDetailNumber"
+                    android:background="@drawable/bg_progress"
+                    android:max="100"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/progressbar" />
+
+                <TextView
+                    android:id="@+id/mDetailCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mDetailProgress"
+                    android:padding="5dip"
+                    android:singleLine="true"
+                    android:text="2000 Participants Required"
+                    android:textColor="#ABABAB" />
+
+                <TextView
+                    android:id="@+id/mDetailNeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/mDetailProgress"
+                    android:padding="5dip"
+                    android:singleLine="true"
+                    android:text="860 Left"
+                    android:textColor="#ABABAB" />
+
+                <TextView
+                    android:id="@+id/mDetailDraw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mDetailCount"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_claim"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:text="Claim it"
+                    android:textColor="#FFFFFF" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="#E4E4E4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:drawableLeft="@mipmap/ic_trophy"
+                    android:drawablePadding="10dip"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="Recent Winners"
+                    android:textColor="#474747"
+                    android:textSize="15sp" />
+
+                <com.android.shopping.widget.ListViewEx
+                    android:id="@+id/mDetailWinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:listSelector="#00000000" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

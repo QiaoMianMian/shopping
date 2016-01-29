@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dip">
+
+    <CheckBox
+        android:id="@+id/frgListItemSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/frgListItemIcon"
+        android:layout_width="75dip"
+        android:layout_height="55dip"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/frgListItemSelected"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_goods_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/frgListItemIcon"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <TextView
+            android:id="@+id/frgListItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Apple iphone6s plus 16G"
+            android:textColor="#3C3E46"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/frgListItemCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No.2018012110003"
+            android:textColor="#929292"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The progress of"
+                android:textColor="#929292"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/frgListItemProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:text="29%"
+                android:textColor="#2B69F4"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="participation "
+                android:textColor="#777777"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/frgListItemPart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="10000"
+                android:textColor="#EC3031"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/frgListItemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="(20000)"
+                android:textColor="#777777"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/frgListItemIntegral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dip"
+                android:singleLine="true"
+                android:text="  Credits:"
+                android:textColor="#777777"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/frgListItemPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="10"
+                android:textColor="#E69429"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/frgListItemTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingTop="1dip"
+                android:text="03:07:07"
+                android:textColor="#EC3031"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/frgListItemClaim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_claim"
+                android:paddingBottom="2dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="2dip"
+                android:text="@string/claim"
+                android:textColor="#FFFFFF"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dip"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/points"
+                android:textColor="#929292"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/txt_bolder">
+
+                <ImageView
+                    android:id="@+id/frgListItemSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dip"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_sub" />
+
+                <EditText
+                    android:id="@+id/frgListItemNum"
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txt_bolder"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:padding="5dip"
+                    android:singleLine="true"
+                    android:text="10"
+                    android:textColor="#2B69F4"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/frgListItemPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dip"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_plus" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="12.0dip"
+        android:paddingTop="12.0dip">
+
+        <LinearLayout
+            android:id="@+id/layoutAccount"
+            style="@style/ListBackgroundUpNoPressedStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="1.0dip"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_marginRight="5.0dip"
+                android:gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_login_user" />
+
+            <EditText
+                android:id="@+id/editLoginAccount"
+                style="@style/LoginEditTextStyle"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:hint="@string/txt_account_hint"
+                android:paddingLeft="6.0dip"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/ivShowHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:src="@mipmap/login_more"
+                android:tag="down" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ListBackgroundDownNoPressedStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="1.0dip"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_marginRight="5.0dip"
+                android:gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_login_pwd" />
+
+
+            <EditText
+                android:id="@+id/editLoginPwd"
+                style="@style/LoginEditTextStyle"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:hint="@string/txt_pwd_hint"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ListBackgroundDownNoPressedStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkRemeberpwd"
+            style="@style/CheckBox"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:checked="true"
+            android:text="@string/txt_remember_pwd"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/txt_find_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_click_selector"
+            android:gravity="center_horizontal"
+            android:text="@string/txt_retrieve_pwd"
+            android:textColor="@color/base_bg_color"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="14.0dip">
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/EnteryLoginButtonTextStyle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="35.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/entry_register_selector"
+            android:text="@string/guide_register"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/EnteryLoginButtonTextStyle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/entry_register_selector"
+            android:text="@string/guide_login"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        facebook:com_facebook_confirm_logout="false"
+        facebook:com_facebook_tooltip_mode="never_display" />
+</LinearLayout>
