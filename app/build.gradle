@@ -73,7 +73,8 @@ dependencies {
     compile files('src/main/libs/umeng-analytics-v5.2.11.jar')
     compile files('src/main/libs/TalkingDataAnalytics_V2.0.4.1.jar')
     compile files('src/main/libs/tapjoyconnectlibrary.jar')
-    compile project(':ViewPagerIndicator-lib')
+//    compile project(':ViewPagerIndicator-lib')
+    compile 'com.viewpager.indicator:ViewPagerIndicator-lib:1.0'
     compile('com.google.android.gms:play-services-ads:8.3.0') {
         exclude module: 'support-v4'
     }
