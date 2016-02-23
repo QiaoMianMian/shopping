@@ -20,7 +20,7 @@ public class StatisticsUtils {
     public static final String SS_TASK_SHAREMR = "ss_task_share_mr"; //更多分享按钮
     public static final String SS_TASK_ITEM = "ss_task_item"; //在Task界面Item
     public static final String SS_FRG_LIST = "ss_frg_list"; //在LIST界面
-    public static final String SS_LIST_CLICK_EDIT = "ss_list_click_edit";//LIST界面编辑按钮
+        public static final String SS_LIST_CLICK_EDIT = "ss_list_click_edit";//LIST界面编辑按钮
     public static final String SS_LIST_CLICK_DEL = "ss_list_click_del";//LIST界面商品删除按钮
     public static final String SS_LIST_CLICK_PLUS = "ss_list_click_plus";//LIST界面增加点数按钮
     public static final String SS_LIST_CLICK_SUB = "ss_list_click_sub";//LIST界面减少点数按钮

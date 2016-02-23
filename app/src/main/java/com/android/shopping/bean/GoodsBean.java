@@ -51,7 +51,6 @@ public class GoodsBean implements Serializable {
         setStarttime(current);
         setPeriod(duration);
         setEndtime(current + duration);
-
     }
 
     public String getId() {
